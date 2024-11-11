@@ -22,6 +22,7 @@
         "joaopaulolndev/filament-general-settings": "^1.0",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
+        "mokhosh/filament-rating": "^1.4",
         "oriondevelops/filament-greeter": "^0.2.0",
         "rmsramos/activitylog": "^1.0",
         "rupadana/filament-announce": "^3.2",

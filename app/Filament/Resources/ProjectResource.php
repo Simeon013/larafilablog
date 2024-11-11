@@ -15,6 +15,7 @@ use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\FileUpload;
 use Illuminate\Database\Eloquent\Builder;
+use Mokhosh\FilamentRating\Components\Rating;
 use Filament\Forms\Components\SpatieTagsInput;
 use App\Filament\Resources\ProjectResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -47,6 +48,7 @@ class ProjectResource extends Resource
                     ]),
                 // SpatieTagsInput::make('technologies_id'),
                 Checkbox::make('is_primary')->required(),
+                Rating::make('rating')
             ]);
     }
 

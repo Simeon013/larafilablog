@@ -13,7 +13,7 @@ use Guava\Tutorials\Concerns\InteractsWithTutorials;
 class CreateProject extends CreateRecord implements HasTutorials
 {
     protected static string $resource = ProjectResource::class;
-    
+
     use InteractsWithTutorials;
 
     public function mount(): void

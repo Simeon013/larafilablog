@@ -12,6 +12,8 @@ use Guava\Tutorials\TutorialsPlugin;
 use App\Filament\Admin\Themes\Awesome;
 use Filament\Http\Middleware\Authenticate;
 use Rmsramos\Activitylog\ActivitylogPlugin;
+use Awcodes\FilamentVersions\VersionsPlugin;
+use Awcodes\FilamentVersions\VersionsWidget;
 use Filament\SpatieLaravelTranslatablePlugin;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Cookie\Middleware\EncryptCookies;
@@ -27,8 +29,23 @@ use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
+use Awcodes\FilamentVersions\Providers\Contracts\VersionProvider;
 use Joaopaulolndev\FilamentEditProfile\FilamentEditProfilePlugin;
 use Joaopaulolndev\FilamentGeneralSettings\FilamentGeneralSettingsPlugin;
+
+
+class MyCustomVersionProvider implements VersionProvider
+{
+    public function getName(): string
+    {
+        return 'My Custom Version';
+    }
+
+    public function getVersion(): string
+    {
+        return '1.0.0';
+    }
+}
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -51,6 +68,7 @@ class AdminPanelProvider extends PanelProvider
             ->widgets([
                 Widgets\AccountWidget::class,
                 Widgets\FilamentInfoWidget::class,
+                VersionsWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,
@@ -86,6 +104,12 @@ class AdminPanelProvider extends PanelProvider
                 FilamentShieldPlugin::make(),
                 FilamentLoggerPlugin::make(),
                 FilamentAccountsPlugin::make(),
+                VersionsPlugin::make()
+                    ->widgetColumnSpan('full')
+                    ->widgetSort(2)
+                    ->items([
+                        new MyCustomVersionProvider(),
+                    ]),
                 TutorialsPlugin::make(),
                 SpatieLaravelTranslatablePlugin::make()
                     ->defaultLocales(['fr', 'en']),

@@ -9,6 +9,7 @@ export default {
         './resources/**/*.js',
         './resources/**/*.vue',
         './vendor/guava/tutorials/resources/**/*.php',
+        './awcodes/filament-versions/resources/**/*.blade.php',
     ],
     theme: {
         extend: {

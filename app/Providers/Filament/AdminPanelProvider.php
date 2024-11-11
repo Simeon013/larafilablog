@@ -34,6 +34,7 @@ use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Awcodes\FilamentVersions\Providers\Contracts\VersionProvider;
 use Joaopaulolndev\FilamentEditProfile\FilamentEditProfilePlugin;
 use Joaopaulolndev\FilamentGeneralSettings\FilamentGeneralSettingsPlugin;
+use Statikbe\FilamentTranslationManager\FilamentChainedTranslationManagerPlugin;
 
 
 class MyCustomVersionProvider implements VersionProvider
@@ -112,6 +113,7 @@ class AdminPanelProvider extends PanelProvider
                     ->items([
                         new MyCustomVersionProvider(),
                     ]),
+                FilamentChainedTranslationManagerPlugin::make(),
                 GreeterPlugin::make()
                     ->message('Welcome,')
                     ->name('Daenerys Targaryen')

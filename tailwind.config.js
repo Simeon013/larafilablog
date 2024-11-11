@@ -10,6 +10,7 @@ export default {
         './resources/**/*.vue',
         './vendor/guava/tutorials/resources/**/*.php',
         './awcodes/filament-versions/resources/**/*.blade.php',
+        "./vendor/statikbe/laravel-filament-chained-translation-manager/**/*.blade.php",
     ],
     theme: {
         extend: {

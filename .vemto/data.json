@@ -5,7 +5,7 @@
                 "uuid": "4efd52d3-54c3-4919-91fd-d74c64f88527",
                 "id": 1,
                 "createdAt": "2024-11-11 14:30:11",
-                "updatedAt": "2024-11-11 15:17:38",
+                "updatedAt": "2024-11-11 15:33:06",
                 "settings": {
                     "cssFramework": "tailwind",
                     "uiStarterKit": "other",
@@ -24,7 +24,7 @@
                     "schemaReaderDbDatabase": "vemto_schema_reader",
                     "laravelVersion": "11.9"
                 },
-                "canShowSchemaSourceChangesAlert": false,
+                "canShowSchemaSourceChangesAlert": true,
                 "codeGenerationSettings": {
                     "models": true,
                     "factories": true,
@@ -97,7 +97,7 @@
                 "connectionFinished": true,
                 "canIgnoreNextSchemaSourceChanges": false,
                 "filesQueueStatus": "idle",
-                "lastReadSchemaDataHash": "7f087a7b7597035f260d770c37b0d8f0",
+                "lastReadSchemaDataHash": "ecc41c370f8ef179d02f57da304f2066",
                 "currentZoom": 40,
                 "currentSchemaError": null,
                 "currentSchemaErrorStack": null

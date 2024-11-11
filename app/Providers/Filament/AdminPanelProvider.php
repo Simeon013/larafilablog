@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Admin\Themes\Awesome;
 use Filament\Pages;
 use Filament\Panel;
 use Filament\Widgets;
@@ -52,13 +53,19 @@ class AdminPanelProvider extends PanelProvider
                 SubstituteBindings::class,
                 DisableBladeIconComponents::class,
                 DispatchServingFilamentEvent::class,
+                \Hasnayeen\Themes\Http\Middleware\SetTheme::class
             ])
             ->authMiddleware([
                 Authenticate::class,
             ])
+            ->tenantMiddleware([
+                \Hasnayeen\Themes\Http\Middleware\SetTheme::class
+            ])
             ->plugins([
                 Blog::make(),
-                ActivitylogPlugin::make()
+                ActivitylogPlugin::make(),
+                \Hasnayeen\Themes\ThemesPlugin::make()
+                    // ->registerTheme([Awesome::getName() => Awesome::class])
             ]);
     }
 }

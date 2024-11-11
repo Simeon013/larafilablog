@@ -8,6 +8,7 @@ use Filament\Widgets;
 use Filament\PanelProvider;
 use Firefly\FilamentBlog\Blog;
 use Filament\Support\Colors\Color;
+use Guava\Tutorials\TutorialsPlugin;
 use App\Filament\Admin\Themes\Awesome;
 use Filament\Http\Middleware\Authenticate;
 use Rmsramos\Activitylog\ActivitylogPlugin;
@@ -76,7 +77,8 @@ class AdminPanelProvider extends PanelProvider
                 //     ->redirectTo(route('some.other.route')),
                 ActivitylogPlugin::make(),
                 FilamentGeneralSettingsPlugin::make(),
-                \Hasnayeen\Themes\ThemesPlugin::make()
+                TutorialsPlugin::make(),
+                \Hasnayeen\Themes\ThemesPlugin::make(),
                     // ->registerTheme([Awesome::getName() => Awesome::class])
             ]);
     }

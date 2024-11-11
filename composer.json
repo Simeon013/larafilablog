@@ -10,9 +10,11 @@
         "firefly/filament-blog": "^2.0",
         "hasnayeen/themes": "^3.0",
         "joaopaulolndev/filament-edit-profile": "^1.0",
+        "joaopaulolndev/filament-general-settings": "^1.0",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
-        "rmsramos/activitylog": "^1.0"
+        "rmsramos/activitylog": "^1.0",
+        "stechstudio/filament-impersonate": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

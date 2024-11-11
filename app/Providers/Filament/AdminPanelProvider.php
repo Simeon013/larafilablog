@@ -21,6 +21,8 @@ use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Joaopaulolndev\FilamentEditProfile\FilamentEditProfilePlugin;
+use Joaopaulolndev\FilamentGeneralSettings\Models\GeneralSetting;
+use Joaopaulolndev\FilamentGeneralSettings\FilamentGeneralSettingsPlugin;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -66,6 +68,7 @@ class AdminPanelProvider extends PanelProvider
                 FilamentEditProfilePlugin::make(),
                 Blog::make(),
                 ActivitylogPlugin::make(),
+                FilamentGeneralSettingsPlugin::make(),
                 \Hasnayeen\Themes\ThemesPlugin::make()
                     // ->registerTheme([Awesome::getName() => Awesome::class])
             ]);

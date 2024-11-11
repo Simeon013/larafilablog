@@ -17,6 +17,7 @@
         "firefly/filament-blog": "^2.0",
         "guava/tutorials": "^1.1",
         "hasnayeen/themes": "^3.0",
+        "ibrahimbougaoua/filament-rating-star": "^1.0",
         "joaopaulolndev/filament-edit-profile": "^1.0",
         "joaopaulolndev/filament-general-settings": "^1.0",
         "laravel/framework": "^11.9",

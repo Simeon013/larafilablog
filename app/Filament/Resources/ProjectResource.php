@@ -9,6 +9,7 @@ use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\TextInput;
@@ -19,6 +20,7 @@ use App\Filament\Resources\ProjectResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use TomatoPHP\FilamentLogger\Facades\FilamentLogger;
 use App\Filament\Resources\ProjectResource\RelationManagers;
+use IbrahimBougaoua\FilamentRatingStar\Forms\Components\RatingStar;
 
 class ProjectResource extends Resource
 {
@@ -38,6 +40,11 @@ class ProjectResource extends Resource
                     ->url()
                     ->suffixIcon('heroicon-m-globe-alt'),
                 TextInput::make('category')->required(),
+                Section::make()
+                    ->schema([
+                        RatingStar::make('rating')
+                        ->label('Rating')
+                    ]),
                 // SpatieTagsInput::make('technologies_id'),
                 Checkbox::make('is_primary')->required(),
             ]);

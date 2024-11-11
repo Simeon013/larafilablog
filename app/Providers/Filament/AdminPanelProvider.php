@@ -6,10 +6,12 @@ use Filament\Pages;
 use Filament\Panel;
 use Filament\Widgets;
 use Filament\PanelProvider;
+use Filament\Actions\Action;
 use Firefly\FilamentBlog\Blog;
 use Filament\Support\Colors\Color;
 use Guava\Tutorials\TutorialsPlugin;
 use App\Filament\Admin\Themes\Awesome;
+use Orion\FilamentGreeter\GreeterPlugin;
 use Filament\Http\Middleware\Authenticate;
 use Rmsramos\Activitylog\ActivitylogPlugin;
 use Awcodes\FilamentVersions\VersionsPlugin;
@@ -110,6 +112,19 @@ class AdminPanelProvider extends PanelProvider
                     ->items([
                         new MyCustomVersionProvider(),
                     ]),
+                GreeterPlugin::make()
+                    ->message('Welcome,')
+                    ->name('Daenerys Targaryen')
+                    ->title('The First of Her Name, the Unburnt, Queen of Meereen, Queen of the Andals and the Rhoynar and the First Men, Khalisee of the Great Grass Sea, Breaker of Chains and Mother of Dragons')
+                    ->avatar(size: 'w-16 h-16', url: 'https://avatarfiles.alphacoders.com/236/236674.jpg')
+                    ->action(
+                        Action::make('action')
+                            ->label('Buy more unsullied')
+                            ->icon('heroicon-o-shopping-cart')
+                            ->url('https://buyunsulliedonline.com')
+                    )
+                    ->sort(-1)
+                    ->columnSpan('full'),
                 TutorialsPlugin::make(),
                 SpatieLaravelTranslatablePlugin::make()
                     ->defaultLocales(['fr', 'en']),

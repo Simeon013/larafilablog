@@ -5,7 +5,7 @@
                 "uuid": "4efd52d3-54c3-4919-91fd-d74c64f88527",
                 "id": 1,
                 "createdAt": "2024-11-11 14:30:11",
-                "updatedAt": "2024-11-11 15:33:06",
+                "updatedAt": "2024-11-11 15:51:35",
                 "settings": {
                     "cssFramework": "tailwind",
                     "uiStarterKit": "other",
@@ -97,7 +97,7 @@
                 "connectionFinished": true,
                 "canIgnoreNextSchemaSourceChanges": false,
                 "filesQueueStatus": "idle",
-                "lastReadSchemaDataHash": "ecc41c370f8ef179d02f57da304f2066",
+                "lastReadSchemaDataHash": "86892db58763bb2603abb59813bf2f3d",
                 "currentZoom": 40,
                 "currentSchemaError": null,
                 "currentSchemaErrorStack": null

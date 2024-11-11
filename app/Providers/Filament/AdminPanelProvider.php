@@ -15,6 +15,8 @@ use Rmsramos\Activitylog\ActivitylogPlugin;
 use Filament\SpatieLaravelTranslatablePlugin;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Cookie\Middleware\EncryptCookies;
+use TomatoPHP\FilamentUsers\FilamentUsersPlugin;
+use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Rupadana\FilamentAnnounce\FilamentAnnouncePlugin;
 use Illuminate\Session\Middleware\AuthenticateSession;
@@ -78,6 +80,8 @@ class AdminPanelProvider extends PanelProvider
                 //     ->redirectTo(route('some.other.route')),
                 ActivitylogPlugin::make(),
                 FilamentGeneralSettingsPlugin::make(),
+                FilamentUsersPlugin::make(),
+                FilamentShieldPlugin::make(),
                 TutorialsPlugin::make(),
                 SpatieLaravelTranslatablePlugin::make()
                     ->defaultLocales(['fr', 'en']),
@@ -86,3 +90,4 @@ class AdminPanelProvider extends PanelProvider
             ]);
     }
 }
+

@@ -4,11 +4,13 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Spatie\Activitylog\LogOptions;
+use Spatie\Permission\Traits\HasRoles;
 use Firefly\FilamentBlog\Traits\HasBlog;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Activitylog\Traits\LogsActivity;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Edwink\FilamentUserActivity\Traits\UserActivityTrait;
 
 class User extends Authenticatable
 {
@@ -17,6 +19,8 @@ class User extends Authenticatable
 
     use HasBlog;
 
+    use HasRoles;
+
     public function canComment(): bool
     {
         // your conditional logic here
@@ -24,6 +28,8 @@ class User extends Authenticatable
     }
 
     use LogsActivity;
+
+    // use UserActivityTrait;
 
     // protected $fillable = ['name', 'text'];
 

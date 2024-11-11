@@ -23,6 +23,7 @@
         "rmsramos/activitylog": "^1.0",
         "rupadana/filament-announce": "^3.2",
         "stechstudio/filament-impersonate": "^3.14",
+        "tomatophp/filament-accounts": "^2.3",
         "tomatophp/filament-logger": "^1.0",
         "tomatophp/filament-users": "^2.0"
     },

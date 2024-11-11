@@ -16,6 +16,7 @@ use Filament\SpatieLaravelTranslatablePlugin;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use TomatoPHP\FilamentUsers\FilamentUsersPlugin;
+use TomatoPHP\FilamentLogger\FilamentLoggerPlugin;
 use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Rupadana\FilamentAnnounce\FilamentAnnouncePlugin;
@@ -82,6 +83,7 @@ class AdminPanelProvider extends PanelProvider
                 FilamentGeneralSettingsPlugin::make(),
                 FilamentUsersPlugin::make(),
                 FilamentShieldPlugin::make(),
+                FilamentLoggerPlugin::make(),
                 TutorialsPlugin::make(),
                 SpatieLaravelTranslatablePlugin::make()
                     ->defaultLocales(['fr', 'en']),

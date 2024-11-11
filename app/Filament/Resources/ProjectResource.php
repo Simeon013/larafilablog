@@ -17,6 +17,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Filament\Forms\Components\SpatieTagsInput;
 use App\Filament\Resources\ProjectResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use TomatoPHP\FilamentLogger\Facades\FilamentLogger;
 use App\Filament\Resources\ProjectResource\RelationManagers;
 
 class ProjectResource extends Resource
@@ -27,6 +28,7 @@ class ProjectResource extends Resource
 
     public static function form(Form $form): Form
     {
+        // FilamentLogger::log(message:'Your message here');
         return $form
             ->schema([
                 TextInput::make('title')->required(),

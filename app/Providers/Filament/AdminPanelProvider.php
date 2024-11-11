@@ -12,6 +12,7 @@ use Guava\Tutorials\TutorialsPlugin;
 use App\Filament\Admin\Themes\Awesome;
 use Filament\Http\Middleware\Authenticate;
 use Rmsramos\Activitylog\ActivitylogPlugin;
+use Filament\SpatieLaravelTranslatablePlugin;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Routing\Middleware\SubstituteBindings;
@@ -78,6 +79,8 @@ class AdminPanelProvider extends PanelProvider
                 ActivitylogPlugin::make(),
                 FilamentGeneralSettingsPlugin::make(),
                 TutorialsPlugin::make(),
+                SpatieLaravelTranslatablePlugin::make()
+                    ->defaultLocales(['fr', 'en']),
                 \Hasnayeen\Themes\ThemesPlugin::make(),
                     // ->registerTheme([Awesome::getName() => Awesome::class])
             ]);

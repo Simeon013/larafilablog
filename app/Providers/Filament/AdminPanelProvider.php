@@ -22,6 +22,7 @@ use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use TomatoPHP\FilamentUsers\FilamentUsersPlugin;
 use TomatoPHP\FilamentLogger\FilamentLoggerPlugin;
+use Awcodes\FilamentStickyHeader\StickyHeaderPlugin;
 use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use FilipFonal\FilamentLogManager\FilamentLogManager;
 use Illuminate\Routing\Middleware\SubstituteBindings;
@@ -122,6 +123,9 @@ class AdminPanelProvider extends PanelProvider
                 GlobalSearchModalPlugin::make(),
                 FilamentSpatieLaravelHealthPlugin::make(),
                 BannerPlugin::make(),
+                StickyHeaderPlugin::make()
+                    ->floating()
+                    ->colored(),
                 GreeterPlugin::make()
                     ->message('Welcome,')
                     ->name('Daenerys Targaryen')

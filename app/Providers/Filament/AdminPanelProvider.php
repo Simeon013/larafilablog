@@ -7,6 +7,7 @@ use Filament\Panel;
 use Filament\Widgets;
 use Filament\PanelProvider;
 use Filament\Actions\Action;
+use LaraZeus\Wind\WindPlugin;
 use Firefly\FilamentBlog\Blog;
 use Kenepa\Banner\BannerPlugin;
 use Filament\Support\Colors\Color;
@@ -139,6 +140,19 @@ class AdminPanelProvider extends PanelProvider
                     )
                     ->sort(-1)
                     ->columnSpan('full'),
+                WindPlugin::make()
+                    ->windPrefix('contact-us')
+                    ->windMiddleware(['web'])
+                    ->defaultDepartmentId(1)
+                    ->defaultStatus('NEW')
+                    ->departmentResource()
+                    ->windModels([
+                        'Department' => \LaraZeus\Wind\Models\Department::class,
+                        'Letter' => \LaraZeus\Wind\Models\Letter::class,
+                    ])
+                    ->uploadDisk('public')
+                    ->uploadDirectory('logos')
+                    ->navigationGroupLabel('Wind'),
                 TutorialsPlugin::make(),
                 SpatieLaravelTranslatablePlugin::make()
                     ->defaultLocales(['fr', 'en']),

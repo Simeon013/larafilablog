@@ -26,6 +26,7 @@
         "joaopaulolndev/filament-edit-profile": "^1.0",
         "joaopaulolndev/filament-general-settings": "^1.0",
         "kenepa/banner": "^0.0.9",
+        "lara-zeus/wind": "^3.2",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
         "mansoor/filament-versionable": "^0.0.11",

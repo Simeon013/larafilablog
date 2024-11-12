@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Overtrue\LaravelVersionable\VersionStrategy;
 
 class Project extends Model
 {
@@ -19,6 +20,8 @@ class Project extends Model
     protected $casts = [
         'technology_id' => 'array',
     ];
+
+    protected $versionStrategy = VersionStrategy::SNAPSHOT;
 
     public function technology()
     {

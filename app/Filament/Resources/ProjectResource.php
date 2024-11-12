@@ -8,6 +8,7 @@ use App\Models\Project;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
+use Awcodes\Shout\Components\Shout;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Checkbox;
@@ -19,6 +20,7 @@ use Mokhosh\FilamentRating\Components\Rating;
 use Filament\Forms\Components\SpatieTagsInput;
 use App\Filament\Resources\ProjectResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Awcodes\FilamentStickyHeader\StickyHeaderPlugin;
 use TomatoPHP\FilamentLogger\Facades\FilamentLogger;
 use App\Filament\Resources\ProjectResource\RelationManagers;
 use IbrahimBougaoua\FilamentRatingStar\Forms\Components\RatingStar;
@@ -48,7 +50,12 @@ class ProjectResource extends Resource
                     ]),
                 // SpatieTagsInput::make('technologies_id'),
                 Checkbox::make('is_primary')->required(),
-                Rating::make('rating')
+                Rating::make('rating'),
+                // StickyHeaderPlugin::make()
+                //     ->floating()
+                //     ->colored(),
+                Shout::make('so-important')
+                    ->content('This is a test')
             ]);
     }
 

@@ -36,6 +36,7 @@ use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Awcodes\FilamentVersions\Providers\Contracts\VersionProvider;
 use Joaopaulolndev\FilamentEditProfile\FilamentEditProfilePlugin;
 use Joaopaulolndev\FilamentGeneralSettings\FilamentGeneralSettingsPlugin;
+use ShuvroRoy\FilamentSpatieLaravelHealth\FilamentSpatieLaravelHealthPlugin;
 use Statikbe\FilamentTranslationManager\FilamentChainedTranslationManagerPlugin;
 
 
@@ -118,6 +119,7 @@ class AdminPanelProvider extends PanelProvider
                 FilamentChainedTranslationManagerPlugin::make(),
                 FilamentLogManager::make(),
                 GlobalSearchModalPlugin::make(),
+                FilamentSpatieLaravelHealthPlugin::make(),
                 GreeterPlugin::make()
                     ->message('Welcome,')
                     ->name('Daenerys Targaryen')

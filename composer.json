@@ -28,6 +28,7 @@
         "oriondevelops/filament-greeter": "^0.2.0",
         "rmsramos/activitylog": "^1.0",
         "rupadana/filament-announce": "^3.2",
+        "shuvroroy/filament-spatie-laravel-health": "^2.1",
         "statikbe/laravel-filament-chained-translation-manager": "^3.2",
         "stechstudio/filament-impersonate": "^3.14",
         "tomatophp/filament-accounts": "^2.3",

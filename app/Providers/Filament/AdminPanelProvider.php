@@ -8,6 +8,7 @@ use Filament\Widgets;
 use Filament\PanelProvider;
 use Filament\Actions\Action;
 use Firefly\FilamentBlog\Blog;
+use Kenepa\Banner\BannerPlugin;
 use Filament\Support\Colors\Color;
 use Guava\Tutorials\TutorialsPlugin;
 use App\Filament\Admin\Themes\Awesome;
@@ -120,6 +121,7 @@ class AdminPanelProvider extends PanelProvider
                 FilamentLogManager::make(),
                 GlobalSearchModalPlugin::make(),
                 FilamentSpatieLaravelHealthPlugin::make(),
+                BannerPlugin::make(),
                 GreeterPlugin::make()
                     ->message('Welcome,')
                     ->name('Daenerys Targaryen')

@@ -22,6 +22,7 @@ use Illuminate\Cookie\Middleware\EncryptCookies;
 use TomatoPHP\FilamentUsers\FilamentUsersPlugin;
 use TomatoPHP\FilamentLogger\FilamentLoggerPlugin;
 use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
+use FilipFonal\FilamentLogManager\FilamentLogManager;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Rupadana\FilamentAnnounce\FilamentAnnouncePlugin;
 use Illuminate\Session\Middleware\AuthenticateSession;
@@ -114,6 +115,7 @@ class AdminPanelProvider extends PanelProvider
                         new MyCustomVersionProvider(),
                     ]),
                 FilamentChainedTranslationManagerPlugin::make(),
+                FilamentLogManager::make(),
                 GreeterPlugin::make()
                     ->message('Welcome,')
                     ->name('Daenerys Targaryen')

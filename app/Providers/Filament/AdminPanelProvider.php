@@ -29,6 +29,7 @@ use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use TomatoPHP\FilamentAccounts\FilamentAccountsPlugin;
 use Filament\Http\Middleware\DisableBladeIconComponents;
+use CharrafiMed\GlobalSearchModal\GlobalSearchModalPlugin;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
@@ -116,6 +117,7 @@ class AdminPanelProvider extends PanelProvider
                     ]),
                 FilamentChainedTranslationManagerPlugin::make(),
                 FilamentLogManager::make(),
+                GlobalSearchModalPlugin::make(),
                 GreeterPlugin::make()
                     ->message('Welcome,')
                     ->name('Daenerys Targaryen')

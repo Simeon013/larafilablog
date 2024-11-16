@@ -13,8 +13,10 @@ use Kenepa\Banner\BannerPlugin;
 use Filament\Support\Colors\Color;
 use Guava\Tutorials\TutorialsPlugin;
 use App\Filament\Admin\Themes\Awesome;
+use Filament\Navigation\NavigationGroup;
 use Orion\FilamentGreeter\GreeterPlugin;
 use Filament\Http\Middleware\Authenticate;
+use Filament\Navigation\NavigationBuilder;
 use Rmsramos\Activitylog\ActivitylogPlugin;
 use Awcodes\FilamentVersions\VersionsPlugin;
 use Awcodes\FilamentVersions\VersionsWidget;
@@ -97,6 +99,14 @@ class AdminPanelProvider extends PanelProvider
             ->tenantMiddleware([
                 \Hasnayeen\Themes\Http\Middleware\SetTheme::class
             ])
+            ->navigation(function (NavigationBuilder $builder): NavigationBuilder {
+                return $builder->groups([
+                    NavigationGroup::make('Website')
+                        ->items([
+                            
+                        ]),
+                ]);
+            })
             ->plugins([
                 FilamentEditProfilePlugin::make(),
                 Blog::make(),

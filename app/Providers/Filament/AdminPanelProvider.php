@@ -21,6 +21,7 @@ use Rmsramos\Activitylog\ActivitylogPlugin;
 use Awcodes\FilamentVersions\VersionsPlugin;
 use Awcodes\FilamentVersions\VersionsWidget;
 use Filament\SpatieLaravelTranslatablePlugin;
+use pxlrbt\FilamentSpotlight\SpotlightPlugin;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use TomatoPHP\FilamentUsers\FilamentUsersPlugin;
@@ -118,6 +119,7 @@ class AdminPanelProvider extends PanelProvider
                 //     ->guard('another-guard')
                 //     ->redirectTo(route('some.other.route')),
                 ActivitylogPlugin::make(),
+                SpotlightPlugin::make(),
                 FilamentGeneralSettingsPlugin::make(),
                 FilamentUsersPlugin::make(),
                 FilamentShieldPlugin::make(),

@@ -99,14 +99,14 @@ class AdminPanelProvider extends PanelProvider
             ->tenantMiddleware([
                 \Hasnayeen\Themes\Http\Middleware\SetTheme::class
             ])
-            ->navigation(function (NavigationBuilder $builder): NavigationBuilder {
-                return $builder->groups([
-                    NavigationGroup::make('Website')
-                        ->items([
-                            
-                        ]),
-                ]);
-            })
+            // ->navigation(function (NavigationBuilder $builder): NavigationBuilder {
+            //     return $builder->groups([
+            //         NavigationGroup::make('Website')
+            //             ->items([
+
+            //             ]),
+            //     ]);
+            // })
             ->plugins([
                 FilamentEditProfilePlugin::make(),
                 Blog::make(),

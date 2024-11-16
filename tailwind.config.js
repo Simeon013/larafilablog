@@ -12,6 +12,8 @@ export default {
         './awcodes/filament-versions/resources/**/*.blade.php',
         "./vendor/statikbe/laravel-filament-chained-translation-manager/**/*.blade.php",
         './vendor/kenepa/banner/resources/**/*.php',
+        './vendor/filament/forms/resources/**/*.php',
+        // './invaders-xx/filament-nested-list/resources/**/*.blade.php',
     ],
     theme: {
         extend: {

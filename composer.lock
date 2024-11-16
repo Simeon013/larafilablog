@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "987d59488b56a5d2447a7a8cfd13216a",
+    "content-hash": "5c29accd798104fe701c4bf02df4a418",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -3655,6 +3655,82 @@
                 "source": "https://github.com/ibrahimBougaoua/filament-rating-star/tree/v1.0.4"
             },
             "time": "2024-09-24T08:05:06+00:00"
+        },
+        {
+            "name": "invaders-xx/filament-nested-list",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/invaders-xx/filament-nested-list.git",
+                "reference": "e0a1a8c71478ff562acd455282ce2f19c6bcfb83"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/invaders-xx/filament-nested-list/zipball/e0a1a8c71478ff562acd455282ce2f19c6bcfb83",
+                "reference": "e0a1a8c71478ff562acd455282ce2f19c6bcfb83",
+                "shasum": ""
+            },
+            "require": {
+                "filament/filament": "^3.0",
+                "filament/support": "^3.0",
+                "illuminate/contracts": "^10.0||^11.0",
+                "php": "^8.2",
+                "spatie/laravel-package-tools": "^1.16"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.15",
+                "nunomaduro/collision": "^8.1.1||^7.10.0",
+                "orchestra/testbench": "^9.0.0||^8.22.0",
+                "pestphp/pest": "^2.34",
+                "pestphp/pest-plugin-arch": "^2.7",
+                "pestphp/pest-plugin-laravel": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "InvadersXX\\FilamentNestedList\\FilamentNestedListServiceProvider"
+                    ],
+                    "aliases": {
+                        "FilamentNestedList": "InvadersXX\\FilamentNestedList\\Facades\\FilamentNestedList"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "InvadersXX\\FilamentNestedList\\": "src/",
+                    "InvadersXX\\FilamentNestedList\\Database\\Factories\\": "database/factories/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Vincent",
+                    "email": "envahisseur@gmail.com",
+                    "role": "Owner"
+                }
+            ],
+            "description": "Nested lists layout plugin for Filament",
+            "homepage": "https://github.com/invaders-xx/filament-nested-list",
+            "keywords": [
+                "Envahisseur",
+                "filament-nested-list",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/invaders-xx/filament-nested-list/issues",
+                "source": "https://github.com/invaders-xx/filament-nested-list/tree/v1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/David Vincent",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-05-13T15:45:06+00:00"
         },
         {
             "name": "jaybizzle/crawler-detect",

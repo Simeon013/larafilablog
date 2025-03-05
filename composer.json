@@ -13,6 +13,7 @@
         "bezhansalleh/filament-language-switch": "^3.1",
         "bezhansalleh/filament-shield": "^3.3",
         "charrafimed/global-search-modal": "^3.4",
+        "cmsmaxinc/filament-system-versions": "^1.0",
         "edwink/filament-user-activity": "^1.0",
         "filament/filament": "^3.2",
         "filament/spatie-laravel-settings-plugin": "^3.2",

@@ -14,6 +14,7 @@ use Filament\Support\Colors\Color;
 use Guava\Tutorials\TutorialsPlugin;
 use App\Filament\Admin\Themes\Awesome;
 use Filament\Navigation\NavigationGroup;
+use Illuminate\Support\Facades\Schedule;
 use Orion\FilamentGreeter\GreeterPlugin;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Navigation\NavigationBuilder;
@@ -41,6 +42,8 @@ use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Awcodes\FilamentVersions\Providers\Contracts\VersionProvider;
 use Joaopaulolndev\FilamentEditProfile\FilamentEditProfilePlugin;
+use Cmsmaxinc\FilamentSystemVersions\Commands\CheckDependencyVersions;
+use Cmsmaxinc\FilamentSystemVersions\Filament\Widgets\DependencyWidget;
 use Joaopaulolndev\FilamentGeneralSettings\FilamentGeneralSettingsPlugin;
 use ShuvroRoy\FilamentSpatieLaravelHealth\FilamentSpatieLaravelHealthPlugin;
 use Statikbe\FilamentTranslationManager\FilamentChainedTranslationManagerPlugin;
@@ -81,6 +84,7 @@ class AdminPanelProvider extends PanelProvider
                 Widgets\AccountWidget::class,
                 Widgets\FilamentInfoWidget::class,
                 VersionsWidget::class,
+                DependencyWidget::make(),
             ])
             ->middleware([
                 EncryptCookies::class,
@@ -110,6 +114,7 @@ class AdminPanelProvider extends PanelProvider
             // })
             ->plugins([
                 FilamentEditProfilePlugin::make(),
+                // Schedule::call(CheckDependencyVersions::class)->daily(),
                 Blog::make(),
                 FilamentAnnouncePlugin::make()
                     ->pollingInterval('30s') // optional, by default it is set to null

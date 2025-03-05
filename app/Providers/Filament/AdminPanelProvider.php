@@ -31,6 +31,7 @@ use Awcodes\FilamentStickyHeader\StickyHeaderPlugin;
 use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use FilipFonal\FilamentLogManager\FilamentLogManager;
 use Illuminate\Routing\Middleware\SubstituteBindings;
+use Mvenghaus\FilamentScheduleMonitor\FilamentPlugin;
 use Rupadana\FilamentAnnounce\FilamentAnnouncePlugin;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
@@ -157,6 +158,7 @@ class AdminPanelProvider extends PanelProvider
                     )
                     ->sort(-1)
                     ->columnSpan('full'),
+                FilamentPlugin::make(),
                 WindPlugin::make()
                     ->windPrefix('contact-us')
                     ->windMiddleware(['web'])

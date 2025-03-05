@@ -36,6 +36,7 @@ use Rupadana\FilamentAnnounce\FilamentAnnouncePlugin;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use TomatoPHP\FilamentAccounts\FilamentAccountsPlugin;
+use Visualbuilder\EmailTemplates\EmailTemplatesPlugin;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use CharrafiMed\GlobalSearchModal\GlobalSearchModalPlugin;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -115,6 +116,7 @@ class AdminPanelProvider extends PanelProvider
             // })
             ->plugins([
                 FilamentEditProfilePlugin::make(),
+                EmailTemplatesPlugin::make(),
                 // Schedule::call(CheckDependencyVersions::class)->daily(),
                 Blog::make(),
                 FilamentAnnouncePlugin::make()

@@ -16,6 +16,7 @@ use App\Filament\Admin\Themes\Awesome;
 use Filament\Navigation\NavigationGroup;
 use Illuminate\Support\Facades\Schedule;
 use Orion\FilamentGreeter\GreeterPlugin;
+use Stephenjude\FilamentBlog\BlogPlugin;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Navigation\NavigationBuilder;
 use Rmsramos\Activitylog\ActivitylogPlugin;
@@ -117,8 +118,9 @@ class AdminPanelProvider extends PanelProvider
             ->plugins([
                 FilamentEditProfilePlugin::make(),
                 EmailTemplatesPlugin::make(),
+                BlogPlugin::make(),
                 // Schedule::call(CheckDependencyVersions::class)->daily(),
-                Blog::make(),
+                // Blog::make(),
                 FilamentAnnouncePlugin::make()
                     ->pollingInterval('30s') // optional, by default it is set to null
                     ->defaultColor(Color::Blue), // optional, by default it is set to "primary"

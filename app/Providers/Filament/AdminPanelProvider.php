@@ -40,6 +40,7 @@ use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use TomatoPHP\FilamentAccounts\FilamentAccountsPlugin;
 use Visualbuilder\EmailTemplates\EmailTemplatesPlugin;
+use A21ns1g4ts\FilamentShortUrl\FilamentShortUrlPlugin;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use CharrafiMed\GlobalSearchModal\GlobalSearchModalPlugin;
 use Cmsmaxinc\FilamentErrorPages\FilamentErrorPagesPlugin;
@@ -120,6 +121,7 @@ class AdminPanelProvider extends PanelProvider
             // })
             ->plugins([
                 FilamentEmail::make(),
+                FilamentShortUrlPlugin::make(),
                 PhosphorIconReplacement::make(),
                 FilamentErrorPagesPlugin::make(),
                 FilamentEditProfilePlugin::make(),

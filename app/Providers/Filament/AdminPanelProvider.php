@@ -26,6 +26,7 @@ use Awcodes\FilamentVersions\VersionsPlugin;
 use Awcodes\FilamentVersions\VersionsWidget;
 use Filament\SpatieLaravelTranslatablePlugin;
 use pxlrbt\FilamentSpotlight\SpotlightPlugin;
+use Saasykit\FilamentOops\FilamentOopsPlugin;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use TomatoPHP\FilamentUsers\FilamentUsersPlugin;
@@ -122,6 +123,7 @@ class AdminPanelProvider extends PanelProvider
             ->plugins([
                 FilamentEmail::make(),
                 FilamentShortUrlPlugin::make(),
+                FilamentOopsPlugin::make()->addEnvironment('local', 'Local', '#008000'),  // Add this line
                 PhosphorIconReplacement::make(),
                 FilamentErrorPagesPlugin::make(),
                 FilamentEditProfilePlugin::make(),

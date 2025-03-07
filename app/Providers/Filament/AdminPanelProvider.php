@@ -31,12 +31,14 @@ use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use TomatoPHP\FilamentUsers\FilamentUsersPlugin;
 use TomatoPHP\FilamentLogger\FilamentLoggerPlugin;
+use Vormkracht10\FilamentMails\FilamentMailsPlugin;
 use Awcodes\FilamentStickyHeader\StickyHeaderPlugin;
 use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use FilipFonal\FilamentLogManager\FilamentLogManager;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Mvenghaus\FilamentScheduleMonitor\FilamentPlugin;
 use Rupadana\FilamentAnnounce\FilamentAnnouncePlugin;
+use Vormkracht10\FilamentMails\Facades\FilamentMails;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use TomatoPHP\FilamentAccounts\FilamentAccountsPlugin;
@@ -120,8 +122,10 @@ class AdminPanelProvider extends PanelProvider
             //             ]),
             //     ]);
             // })
+            // ->routes(FilamentMails::routes())
             ->plugins([
                 FilamentEmail::make(),
+                FilamentMailsPlugin::make(),
                 FilamentShortUrlPlugin::make(),
                 FilamentOopsPlugin::make()->addEnvironment('local', 'Local', '#008000'),  // Add this line
                 PhosphorIconReplacement::make(),

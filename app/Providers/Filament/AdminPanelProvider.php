@@ -42,6 +42,7 @@ use TomatoPHP\FilamentAccounts\FilamentAccountsPlugin;
 use Visualbuilder\EmailTemplates\EmailTemplatesPlugin;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use CharrafiMed\GlobalSearchModal\GlobalSearchModalPlugin;
+use Cmsmaxinc\FilamentErrorPages\FilamentErrorPagesPlugin;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
@@ -120,6 +121,7 @@ class AdminPanelProvider extends PanelProvider
             ->plugins([
                 FilamentEmail::make(),
                 PhosphorIconReplacement::make(),
+                FilamentErrorPagesPlugin::make(),
                 FilamentEditProfilePlugin::make(),
                 EmailTemplatesPlugin::make(),
                 // BlogPlugin::make(),

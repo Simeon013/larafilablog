@@ -13,6 +13,7 @@
         "bezhansalleh/filament-language-switch": "^3.1",
         "bezhansalleh/filament-shield": "^3.3",
         "charrafimed/global-search-modal": "^3.4",
+        "cmsmaxinc/filament-error-pages": "^1.0",
         "cmsmaxinc/filament-system-versions": "^1.0",
         "edwink/filament-user-activity": "^1.0",
         "filafly/phosphor-icon-replacement": "^1.0",

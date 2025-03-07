@@ -11,6 +11,7 @@ use LaraZeus\Wind\WindPlugin;
 use Firefly\FilamentBlog\Blog;
 use Kenepa\Banner\BannerPlugin;
 use Filament\Support\Colors\Color;
+use Filafly\PhosphorIconReplacement;
 use Guava\Tutorials\TutorialsPlugin;
 use App\Filament\Admin\Themes\Awesome;
 use Filament\Navigation\NavigationGroup;
@@ -118,6 +119,7 @@ class AdminPanelProvider extends PanelProvider
             // })
             ->plugins([
                 FilamentEmail::make(),
+                PhosphorIconReplacement::make(),
                 FilamentEditProfilePlugin::make(),
                 EmailTemplatesPlugin::make(),
                 // BlogPlugin::make(),

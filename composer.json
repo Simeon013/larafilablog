@@ -36,6 +36,7 @@
         "laravel/tinker": "^2.9",
         "mansoor/filament-versionable": "^0.0.11",
         "mokhosh/filament-rating": "^1.4",
+        "monzer/filament-chatify-integration": "^1.0",
         "mvenghaus/filament-plugin-schedule-monitor": "3.0",
         "oriondevelops/filament-greeter": "^0.2.0",
         "pxlrbt/filament-spotlight": "^1.2",

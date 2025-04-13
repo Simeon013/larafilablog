@@ -33,6 +33,7 @@ use TomatoPHP\FilamentUsers\FilamentUsersPlugin;
 use TomatoPHP\FilamentLogger\FilamentLoggerPlugin;
 use Vormkracht10\FilamentMails\FilamentMailsPlugin;
 use Awcodes\FilamentStickyHeader\StickyHeaderPlugin;
+use Monzer\FilamentChatifyIntegration\ChatifyPlugin;
 use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use FilipFonal\FilamentLogManager\FilamentLogManager;
 use Illuminate\Routing\Middleware\SubstituteBindings;
@@ -124,6 +125,7 @@ class AdminPanelProvider extends PanelProvider
             // })
             // ->routes(FilamentMails::routes())
             ->plugins([
+                ChatifyPlugin::make(),
                 FilamentEmail::make(),
                 FilamentMailsPlugin::make(),
                 FilamentShortUrlPlugin::make(),

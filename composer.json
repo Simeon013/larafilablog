@@ -49,6 +49,7 @@
         "statikbe/laravel-filament-chained-translation-manager": "^3.2",
         "stechstudio/filament-impersonate": "^3.14",
         "stephenjude/filament-blog": "^4.0",
+        "tapp/filament-maillog": "^1.0",
         "tomatophp/filament-accounts": "^2.3",
         "tomatophp/filament-logger": "^1.0",
         "tomatophp/filament-users": "^2.0",

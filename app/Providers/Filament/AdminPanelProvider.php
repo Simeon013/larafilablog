@@ -28,6 +28,7 @@ use Filament\SpatieLaravelTranslatablePlugin;
 use pxlrbt\FilamentSpotlight\SpotlightPlugin;
 use Saasykit\FilamentOops\FilamentOopsPlugin;
 use Illuminate\Session\Middleware\StartSession;
+use Tapp\FilamentMailLog\FilamentMailLogPlugin;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use TomatoPHP\FilamentUsers\FilamentUsersPlugin;
 use TomatoPHP\FilamentLogger\FilamentLoggerPlugin;
@@ -127,6 +128,7 @@ class AdminPanelProvider extends PanelProvider
             ->plugins([
                 ChatifyPlugin::make(),
                 FilamentEmail::make(),
+                FilamentMailLogPlugin::make(),
                 FilamentMailsPlugin::make(),
                 FilamentShortUrlPlugin::make(),
                 FilamentOopsPlugin::make()->addEnvironment('local', 'Local', '#008000'),  // Add this line
